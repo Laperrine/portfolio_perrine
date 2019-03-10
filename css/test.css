@@ -1,0 +1,33 @@
+
+.buttonprojet {
+  height: 100px;
+  width: 300px;
+  border: 1px solid #9C3C31;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.4s;
+  color: white;
+}
+
+.buttonprojet:hover {
+  color: #ffffff;
+}
+
+.buttonprojet .layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: gold;
+  transform: translateX(-100%);
+  transition: transform 0.4s;
+}
+
+.buttonprojet:hover .layer {
+  transform: translateX(0);
+}

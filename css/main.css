@@ -1,0 +1,820 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+body{
+  background-color: #577F81;
+  overflow-x: hidden;
+  cursor: url("../images/rondd.png"), auto;
+}
+
+@font-face {
+	font-family: "Orkney";
+	src: url("/font/orkney-medium.otf") format("otf");
+}
+
+header{
+  position: absolute;
+
+  width: 100vw;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.3);
+
+  z-index: 3;
+}
+a {
+  text-decoration: none;
+}
+
+.logo{
+  height: 100%;
+  width: auto;
+  margin-left: 30px;
+  margin-top: 5px;
+
+}
+.barmenu{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  color: white;
+  font-family: "Orkney", sans-serif;
+  text-transform: uppercase;
+  width: 500px;
+}
+
+.menu__item{
+  text-decoration: none;
+  color: white;
+}
+
+.menu__item-name {
+	position: relative;
+}
+
+.menu__item-name {
+	padding: 0 0.35em;
+}
+
+.menu__item-name::before {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	width: 100%;
+	height: 50%;
+	left: 0;
+	bottom: 0;
+	transform: scale3d(0,1,1);
+	transform-origin: 0% 50%;
+	transition: transform 0.5s;
+	transition-timing-function: cubic-bezier(0.2,1,0.3,1);
+
+}
+
+.menu__item-name::before {
+	background: #577F81;
+}
+
+/* Hover */
+.menu__item:hover .menu__item-name::before,
+.menu__item:focus .menu__item-name::before {
+	transform: scale3d(1,1,1);
+}
+
+
+
+.page {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  height: 100vh;
+  background-image: url('../images/moii.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.button {
+  height: 66px;
+  width: 200px;
+  border: 2px solid #9C3C31;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.4s;
+  color: white;
+  margin: 5px;
+  font-family: "Orkney", sans-serif;
+}
+
+.button:hover {
+  color: #ffffff;
+}
+
+.button .layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: #577F81;
+  transform: translateX(-100%);
+  transition: transform 0.4s;
+}
+
+.button:hover .layer {
+  transform: translateX(0);
+}
+
+
+
+
+.bleu{
+  margin: 5px;
+  background: rgba(87,127,129,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+
+}
+
+.buttoncv p{
+  color: white;
+  font-family: "Orkney", sans-serif;
+  margin: 0 5px;
+
+
+}
+
+.iamperrine{
+font-family: "Orkney", sans-serif;
+text-transform: uppercase;
+font-size: 120px;
+font-weight: bold;
+display: flex;
+flex-direction: column;
+margin-right: 70px;
+line-height: 105px;
+
+}
+.hello {
+  color: #cc6658;
+  opacity: 0;
+}
+.fade .hello{
+  opacity: 1;
+}
+.virgule1{
+  color: #577F81;
+  opacity: 0;
+}
+.fade .virgule1{
+  opacity: 1;
+}
+
+
+.iam {
+  color: #b64f42;
+  opacity: 0;
+}
+.fade .iam{
+  opacity: 1;
+  transition-delay: 0.5s;
+}
+.virgule2{
+  color: #577F81;
+  opacity: 0;
+}
+.fade .virgule2{
+  opacity: 1;
+  transition-delay: 0.5s;
+}
+
+.perrine{
+  color: #9c3c31;
+  opacity: 0;
+}
+.fade .perrine{
+  opacity: 1;
+  transition-delay: 1s;
+}
+
+
+
+.bloc1{
+  margin: auto;
+  display: flex;
+  background: white;
+  height: 500px;
+  width: 500px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  position: relative;
+  margin-top: -60px;
+  z-index: 1;
+}
+
+h1{
+  color: #dbc1bf;
+  font-family: "Orkney", sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 150px;
+
+}
+
+.bloc1 .form{
+  color: #b64f42;
+  font-family: "Orkney", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 70px;
+  position: absolute;
+  top: 85px;
+  letter-spacing: 15px;
+
+
+}
+
+.formation{
+  font-family: "Orkney", sans-serif;
+  color: #b64f42;
+}
+
+.bloc2{
+  margin: auto;
+  display: flex;
+  background: #b64f42;
+  height: 600px;
+  width: 1100px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  position: relative;
+  margin-top: -60px;
+}
+
+.bloc2 h1{
+  position: relative;
+  color: #90a1a1;
+  top: 25px;
+}
+
+.bloc2 .savoir{
+  color: #577f81;
+  font-family: "Orkney", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 70px;
+  position: absolute;
+  top: 110px;
+  letter-spacing: 25px;
+
+}
+
+
+
+.competences>div {
+  display: flex;
+  height: 35px;
+  margin: 20px;
+}
+
+.evolution{
+  width: 700px;
+  display: flex;
+}
+.evolution div{
+  width: 0;
+}
+.visible .evolution div{
+  transition: width 1s;
+}
+.visible .comp1 div{
+  width: 70%;
+}
+.visible .comp2 div{
+  width: 30%;
+  transition-delay: 0.2s;
+}
+.visible .comp3 div{
+  width: 20%;
+  transition-delay: 0.4s;
+}
+.visible .comp4 div{
+  width: 20%;
+  transition-delay: 0.6s;
+}
+.visible .comp5 div{
+  width: 10%;
+  transition-delay: 0.8s;
+}
+.visible .comp6 div{
+  width: 90%;
+  transition-delay: 1s;
+}
+
+.evolution div{
+  height: 100%;
+  background-color: #577F81;
+}
+
+.competences>div .photo {
+  width: 200px;
+  display: flex;
+  justify-content: flex-start;
+
+}
+
+.evolution p{
+  margin: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: "Orkney", sans-serif;
+  text-transform: uppercase;
+  text-align: left;
+  line-height: 50px;
+
+}
+
+.photo p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: "Orkney", sans-serif;
+  text-transform: uppercase;
+  text-align: left;
+  line-height: 50px;
+}
+
+.hobbies{
+  display: flex;
+  justify-content: center;
+  margin-top: -60px;
+}
+
+.hobbies img {
+  /*flex: 1; + background image */
+  width: 25%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s;
+}
+.hobbies.visible img {
+  opacity: 1;
+}
+
+.hobbies .appareil{
+  transition-delay: 0.2s;
+}
+
+.hobbies .ski{
+  transition-delay: 0.4s;
+}
+
+.hobbies .swim{
+  transition-delay: 0.6s;
+}
+
+.hobbies .travel{
+  transition-delay: 0.8s;
+}
+
+.top120 {
+  position: relative;
+  top: -120px;
+}
+
+
+
+/*-----------------------------*/
+/*---------- PORJETS ----------*/
+/*-----------------------------*/
+.bloc3 {
+  position: relative;
+  width: 100vw;
+}
+.background_bloc3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+
+  z-index: -2;
+}
+/*--- Titre ---*/
+.topBloc3{
+  display: flex;
+  justify-content: center;
+}
+.bloc3 h1{
+  color: #dbc1bf;
+  top: 25px;
+  position: relative;
+}
+.bloc3 .project{
+  color: #b64f42;
+  font-family: "Orkney", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 70px;
+  position: absolute;
+  margin-top: 75px;
+  letter-spacing: 25px;
+}
+
+.projet1, .projet2, .projet3, .projet4, .projet5, .projet6 {
+  display: flex;
+
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+
+  padding: 70px 0;
+  margin-top: 100px;
+
+
+}
+.projet1, .projet3, .projet5 {
+  background-image: url('../images/points.svg');
+  background-position: bottom left;
+}
+.projet2, .projet4, .projet6 {
+  background-image: url('../images/points2.svg');
+  background-position: bottom right;
+}
+
+.left{
+  flex : 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+}
+.right{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px 20px;
+}
+
+
+.imageProjet{
+  height: 400px;
+  width: 400px;
+}
+.imageProjet img{
+  width: 100%;
+}
+.texte{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-left: 150px;
+}
+.texte h2{
+  font-family: "Orkney", sans-serif;
+  color: #b64f42;
+  font-weight: bold;
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+.texte p{
+  width: 80%;
+  font-family: "Orkney", sans-serif;
+  color: #b64f42;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+
+
+
+.buttonprojet {
+  height: 45px;
+  width: 150px;
+  border: 2px solid #9C3C31;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  transition: color 0.4s;
+  margin: 5px;
+  font-family: "Orkney", sans-serif;
+  color: #577F81;
+  cursor: pointer;
+}
+
+.buttonprojet:hover {
+  color: #ffffff;
+}
+
+.buttonprojet .layer1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-color: #577F81;
+  transform: translateX(-100%);
+  transition: transform 0.4s;
+}
+
+.buttonprojet:hover .layer1 {
+  transform: translateX(0);
+}
+
+.voirlasuite{
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttonvoir{
+  height: 50px;
+  width: 250px;
+  background:#b64f42;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid #577F81;
+  margin: 100px 100px;
+
+}
+
+.buttonvoir p{
+  font-family: "Orkney", sans-serif;
+  color: white;
+  font-size: 14px;
+  text-transform: uppercase;
+
+}
+
+/*--- Voir le projet ---*/
+.container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	/* Echelle de 110% de la taille réelle, passera à taille réelle grace à la classe css visible */
+	transform: scale(1.1);
+	/* Transparent par défaut, passera à opaque grace à la classe css visible */
+	opacity: 0;
+	/* Toute modification d'une porpriété CSS engendrera une transition de 400 millisecondes */
+	transition: all 0.4s;
+	/* Gris moyen transparent à 50% */
+	background-color: rgba(127, 127, 127, 0.2);
+	/* La combinaison de ces 3 propriétés suivantes permet de centrer horizontalement et verticalement les enfants de cet élément HTML */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+  z-index: -2;
+}
+.container.visible {
+	transform: scale(1);
+	opacity: 1;
+
+  z-index: 8;
+}
+.wrapper {
+  position:relative;
+	width: 129vh;
+	height: 90vh;
+
+	/* Alignment principal vertical, en ayant une répatition uniforme de l'espace disponible autour des enfants */
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	/* Centrage selon l'axe secondaire, c'est à dire centrage horizontal */
+	align-items: center;
+  overflow: hidden;
+}
+
+.slider{
+  display: flex;
+
+  width: 100%;
+  height: 100%;
+
+  transition: transform 0.7s;
+}
+.slide{
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#projet_1 .slide1{
+  background-image: url('../images/caroussel/pecheAPied1.png');
+}
+#projet_1 .slide2{
+  background-image: url('../images/caroussel/pecheAPied2.png');
+}
+#projet_1 .slide3{
+  background-image: url('../images/peche3.png');
+}
+
+#projet_2 .slide1{
+  background-image: url('../images/abc_page1.png');
+}
+#projet_2 .slide2{
+  background-image: url('../images/abc_logo.png');
+}
+#projet_2 .slide3{
+  background-image: url('../images/abc_page3.png');
+}
+
+#projet_3 .slide1{
+  background-image: url('../images/helpy_page1.png');
+
+}
+#projet_3 .slide2{
+  background-image: url('../images/helpy_page2.png');
+}
+#projet_3 .slide3{
+  background-image: url('../images/helpy_page3.png');
+}
+
+#projet_4 .slide1{
+  background-image: url('../images/dose_page1.png');
+
+}
+#projet_4 .slide2{
+  background-image: url('../images/dose_page2.png');
+}
+#projet_4 .slide3{
+  background-image: url('../images/dose_page3.png');
+}
+
+#projet_5 .slide1{
+  background-image: url('../images/iamddb1.png');
+}
+#projet_5 .slide2{
+  background-image: url('../images/iamddb2.png');
+}
+#projet_5 .slide3{
+  background-image: url('../images/iamddb3.png');
+}
+
+#projet_6 .slide1{
+  background-image: url('../images/offre1.png');
+}
+#projet_6 .slide2{
+  background-image: url('../images/offre2.png');
+}
+#projet_6 .slide3{
+  background-image: url('../images/offre3.png');
+}
+
+.arrow{
+  position: absolute;
+  top: 45%;
+
+  display: flex;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+
+  z-index: 3;
+  cursor: pointer;
+}
+.arrow img {
+  height: 100%;
+  width: auto;
+}
+.arrow_left{
+  left: 5px;
+}
+.arrow_right{
+  right: 5px;
+}
+.cross {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+
+  width: 30px;
+  height: 30px;
+
+  z-index: 3;
+}
+
+
+
+
+
+.bloc4{
+  background-image: url("../images/plannantes.png");
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+}
+
+.bloc4 .left2 .keepintouch{
+  font-family: "Orkney", sans-serif;
+text-transform: uppercase;
+font-size: 100px;
+color: #9C3631;
+font-weight: bold;
+
+}
+
+.right2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.bloc4 .right2 .petit{
+  font-family: "Orkney", sans-serif;
+  color: white;
+  text-transform: uppercase;
+  font-size: 24pt;
+}
+
+.bloc4 .right2 .gros{
+  font-family: "Orkney", sans-serif;
+  color: white;
+  font-size: 30pt;
+  font-weight: bold;
+}
+
+.bloc4 .right2 .gros a{
+  color: white;
+}
+
+.bloc4 .toutpetit{
+  font-family: "Orkney", sans-serif;
+  color: white;
+  font-size: 14pt;
+
+}
+
+.reseaux{
+margin-top: 360px;
+display: flex;
+flex-direction: row;
+/* margin-left: 100px; */
+
+}
+
+.reseaux img{
+  height: 80px;
+  width: 110px;
+  margin-left: 40px;
+  margin-top: -30px;
+}
+
+
+.mesreseaux{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 190px;
+}
+.mesreseaux img{
+  width: 50px;
+  height: auto;
+
+
+}
+
+.custom {
+  cursor: url('../images/rondd.png'), auto;
+}
